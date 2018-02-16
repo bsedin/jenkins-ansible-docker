@@ -1,7 +1,7 @@
-FROM jenkins:alpine
+FROM jenkins
 
 USER root
 
-RUN apk add --no-cache ansible
+RUN apt-get update && apt-get install -y ansible
 
 USER jenkins
